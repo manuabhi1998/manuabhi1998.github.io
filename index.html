@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Sample</title>
+        <style>
+            .image{
+                position: relative;
+            }
+            
+            .img{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            
+            h1{
+                text-align: center;
+            }
+        </style>
+        
+        <script>
+            function changeImage() {
+                var image = document.getElementById('front-wall');
+                if (image.src.match("parts/front-wall.png")) {
+                    image.src = "parts/front-wall-colored.png";
+                }
+                else {
+                    image.src = "parts/front-wall.png";
+                }
+            }
+            
+    </script>
+        
+    </head>
+    
+    <body>
+        
+        <h1>This is just the sample!!!!!!</h1>
+        
+        <div>
+            <input type="button" onclick="changeImage()" value="Change color of wall" />
+        </div>
+        
+        <div class="image">
+            <img src="parts/front-wall.png" class="img" id="front-wall">
+            <img src="parts/top.png" class="img">
+            <img src="parts/lower-brick.png" class="img">
+            <img src="parts/full-house.png" class="img">
+            
+        </div>
+    </body>
+</html>
